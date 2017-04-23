@@ -25,7 +25,7 @@ class Pokemon {
         return _pokemonID
     }
     
-    init(name: String, pokemonID: String){
+    init(name: String, pokemonID: Int){
         
         self._name = name
         self._pokemonID = pokemonID
