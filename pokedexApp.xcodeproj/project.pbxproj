@@ -14,6 +14,7 @@
 		1183B9131EAA9D3A00AA2DD2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1183B9111EAA9D3A00AA2DD2 /* LaunchScreen.storyboard */; };
 		1183B91B1EAC687A00AA2DD2 /* pokemon.csv in Resources */ = {isa = PBXBuildFile; fileRef = 1183B91A1EAC687A00AA2DD2 /* pokemon.csv */; };
 		1183B91F1EAC6AB500AA2DD2 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183B91E1EAC6AB500AA2DD2 /* Pokemon.swift */; };
+		1183B9211EAD5F6F00AA2DD2 /* PokeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183B9201EAD5F6F00AA2DD2 /* PokeCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		1183B9141EAA9D3A00AA2DD2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1183B91A1EAC687A00AA2DD2 /* pokemon.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon.csv; sourceTree = "<group>"; };
 		1183B91E1EAC6AB500AA2DD2 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Pokemon.swift; path = ../Pokemon.swift; sourceTree = "<group>"; };
+		1183B9201EAD5F6F00AA2DD2 /* PokeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokeCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +64,7 @@
 				1183B9081EAA9D3A00AA2DD2 /* AppDelegate.swift */,
 				1183B90A1EAA9D3A00AA2DD2 /* ViewController.swift */,
 				1183B90C1EAA9D3A00AA2DD2 /* Main.storyboard */,
+				1183B9201EAD5F6F00AA2DD2 /* PokeCell.swift */,
 				1183B90F1EAA9D3A00AA2DD2 /* Assets.xcassets */,
 				1183B9111EAA9D3A00AA2DD2 /* LaunchScreen.storyboard */,
 				1183B91A1EAC687A00AA2DD2 /* pokemon.csv */,
@@ -144,6 +147,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1183B9211EAD5F6F00AA2DD2 /* PokeCell.swift in Sources */,
 				1183B90B1EAA9D3A00AA2DD2 /* ViewController.swift in Sources */,
 				1183B9091EAA9D3A00AA2DD2 /* AppDelegate.swift in Sources */,
 				1183B91F1EAC6AB500AA2DD2 /* Pokemon.swift in Sources */,
