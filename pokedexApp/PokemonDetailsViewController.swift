@@ -11,6 +11,19 @@ import UIKit
 class PokemonDetailsViewController: UIViewController {
 
     @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var mainImage: UIImageView!
+    @IBOutlet weak var descriptionLabel: UILabel!
+    @IBOutlet weak var typeLabel: UILabel!
+    @IBOutlet weak var defenseLabel: UILabel!
+    @IBOutlet weak var heightLabel: UILabel!
+    @IBOutlet weak var pokedexLabel: UILabel!
+    @IBOutlet weak var weightLabel: UILabel!
+    @IBOutlet weak var attackLabel: UILabel!
+    @IBOutlet weak var currentEvoImage: UIImageView!
+    @IBOutlet weak var nextEvoImage: UIImageView!
+    @IBOutlet weak var evoLabel: UILabel!
+    
+    
     var pokemon: Pokemon!
     
     
@@ -27,5 +40,9 @@ class PokemonDetailsViewController: UIViewController {
     }
 
 
+    @IBAction func backButtonPressde(_ sender: UIButton) {
+        
+        dismiss(animated: true, completion: nil)
+    }
 
 }
