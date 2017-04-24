@@ -30,7 +30,13 @@ class PokemonDetailsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        nameLabel.text = pokemon.name
+        nameLabel.text = pokemon.name.capitalized
+        
+        let image = UIImage(named: "\(pokemon.pokemonID)")
+        mainImage.image = image
+        currentEvoImage.image = image
+        
+        pokedexLabel.text = "\(pokemon.pokemonID)"
         
         pokemon.downloadPokemonDetails {
             // whatever we write here will only call once the network call is completed
@@ -45,6 +51,7 @@ class PokemonDetailsViewController: UIViewController {
         defenseLabel.text = pokemon.defense
         heightLabel.text = pokemon.height
         weightLabel.text = pokemon.weight
+        typeLabel.text = pokemon.type
         
     }
 

@@ -136,6 +136,33 @@ class Pokemon {
                 print(self._height)
                 print(self._attack)
                 print(self._defense)
+            
+            if let types = dictionary["types"] as? [Dictionary<String, String>] , types.count > 0 {
+                
+                
+                if let name = types[0]["name"]  {
+                    
+                    self._type = name.capitalized
+                }
+                
+                if types.count > 1 {
+                    
+                    for x in 1..<types.count {
+                        
+                        if let name = types[x]["name"] {
+                            
+                            self._type = "/\(name.capitalized)"
+                        }
+                    }
+                }
+                
+                print(self._type)
+                
+            } else {
+                
+                    self._type = ""
+            }
+            
             }
             
             completed()
