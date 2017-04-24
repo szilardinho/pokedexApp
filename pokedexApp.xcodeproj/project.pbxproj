@@ -18,6 +18,7 @@
 		1183B9231EAD6E4200AA2DD2 /* csv.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183B9221EAD6E4200AA2DD2 /* csv.swift */; };
 		1183B9251EAD774800AA2DD2 /* Pokemon Hollow.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 1183B9241EAD774800AA2DD2 /* Pokemon Hollow.ttf */; };
 		1183B9271EAD7BF800AA2DD2 /* pokemonTheme.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 1183B9261EAD7BF800AA2DD2 /* pokemonTheme.mp3 */; };
+		1183B9291EAD8AC900AA2DD2 /* PokemonDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183B9281EAD8AC900AA2DD2 /* PokemonDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		1183B9221EAD6E4200AA2DD2 /* csv.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = csv.swift; sourceTree = "<group>"; };
 		1183B9241EAD774800AA2DD2 /* Pokemon Hollow.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pokemon Hollow.ttf"; sourceTree = "<group>"; };
 		1183B9261EAD7BF800AA2DD2 /* pokemonTheme.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = pokemonTheme.mp3; sourceTree = "<group>"; };
+		1183B9281EAD8AC900AA2DD2 /* PokemonDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PokemonDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				1183B91E1EAC6AB500AA2DD2 /* Pokemon.swift */,
 				1183B9081EAA9D3A00AA2DD2 /* AppDelegate.swift */,
 				1183B90A1EAA9D3A00AA2DD2 /* ViewController.swift */,
+				1183B9281EAD8AC900AA2DD2 /* PokemonDetailsViewController.swift */,
 				1183B90C1EAA9D3A00AA2DD2 /* Main.storyboard */,
 				1183B9201EAD5F6F00AA2DD2 /* PokeCell.swift */,
 				1183B90F1EAA9D3A00AA2DD2 /* Assets.xcassets */,
@@ -164,6 +167,7 @@
 				1183B9091EAA9D3A00AA2DD2 /* AppDelegate.swift in Sources */,
 				1183B91F1EAC6AB500AA2DD2 /* Pokemon.swift in Sources */,
 				1183B9231EAD6E4200AA2DD2 /* csv.swift in Sources */,
+				1183B9291EAD8AC900AA2DD2 /* PokemonDetailsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
