@@ -21,8 +21,42 @@ class Pokemon {
     private var _weight: String!
     private var _attack: String!
     private var _nextEvolutionText: String!
+    private var _nextEvolutionName: String!
+    private var _nextEvolutionID: String!
+    private var _nextEvolutionLevel: String!
     private var _pokemonURL: String!
     
+    
+    
+    var nextEvolutionLevel: String {
+        
+        if _nextEvolutionLevel == nil {
+            
+            _nextEvolutionLevel = ""
+        }
+        return _nextEvolutionLevel
+    }
+
+    
+    var nextEvolutionID: String {
+        
+        if _nextEvolutionID == nil {
+            
+            _nextEvolutionID = ""
+        }
+        return _nextEvolutionID
+    }
+
+    
+    var nexEvolutionName: String {
+        
+        if _nextEvolutionName == nil {
+            
+            _nextEvolutionName = ""
+        }
+        return _nextEvolutionName
+    }
+
     
     var description: String {
         
@@ -151,7 +185,7 @@ class Pokemon {
                         
                         if let name = types[x]["name"] {
                             
-                            self._type = "/\(name.capitalized)"
+                            self._type! += "/\(name.capitalized)"
                         }
                     }
                 }
@@ -163,6 +197,78 @@ class Pokemon {
                     self._type = ""
             }
             
+            
+            if let descriptionArray = dictionary["descriptions"] as? [Dictionary<String, String>] , descriptionArray.count > 0 {
+                
+                if let url = descriptionArray[0]["resource_uri"] {
+                    
+                    let descriptionURL = "\(URL_base)\(url)"
+                    
+                    Alamofire.request(descriptionURL).responseJSON(completionHandler: { (response) in
+                        
+                        if let descriptionDictionary = response.result.value as? Dictionary<String, AnyObject> {
+                            
+                            if let description = descriptionDictionary["description"] as? String {
+                                
+                                let newDescription = description.replacingOccurrences(of: "POKMON", with: "Pokèmon")
+                                
+                                self._description = newDescription
+                                
+                                print(newDescription)
+                            }
+                        }
+                        
+                        completed()
+                        
+                        
+                        
+                    })
+                }
+                
+                
+            } else {
+                
+                self._description = ""
+            }
+            
+            if let evolutions = dictionary["evolutions"] as?  [Dictionary<String, AnyObject>] , evolutions.count > 0 {
+                
+                if let nextEvo = evolutions[0]["to"] as? String {
+                    
+                    if nextEvo.range(of: "mega") == nil {
+                        
+                        self._nextEvolutionName = nextEvo
+                        
+                        if let uri = evolutions[0]["resource_uri"] as? String {
+                            
+                            let newString = uri.replacingOccurrences(of: "/api/v1/pokemon/", with: "")
+                            let nextEvoID =  newString.replacingOccurrences(of: "/", with: "")
+                            
+                            self._nextEvolutionID = nextEvoID
+                            
+                            if let levelExist = evolutions[0]["level"] {
+                                
+                                if let level  = levelExist as? Int {
+                                    
+                                    self._nextEvolutionLevel = "\(level)"
+                                }
+                            } else {
+                                
+                                self._nextEvolutionLevel = ""
+                                }
+                            
+                            }
+                        
+                        }
+                    
+                    }
+                
+                    print(self._nextEvolutionID)
+                    print(self._nextEvolutionLevel)
+                    print(self._nextEvolutionName)
+                
+                }
+            
             }
             
             completed()
@@ -170,12 +276,6 @@ class Pokemon {
         }
         
     }
-    
-    
-    
-    
-    
-    
     
     
 }
