@@ -8,6 +8,11 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Pokemon Hollow.ttf">
+            <string>PokemonHollowNormal</string>
+        </array>
+    </customFonts>
     <scenes>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -23,9 +28,36 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eBg-L7-10a">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="65"/>
-                                <color key="backgroundColor" red="1" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Pokèdex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fdW-eh-LI3">
+                                        <rect key="frame" x="111" y="4" width="152" height="56"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="152" id="QPK-fg-2sx"/>
+                                            <constraint firstAttribute="height" constant="56" id="wia-6Q-l1D"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="PokemonHollowNormal" family="Pokemon Hollow" pointSize="40"/>
+                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="OZn-LF-Yyf">
+                                        <rect key="frame" x="327" y="20" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="jdq-Qd-jVG"/>
+                                            <constraint firstAttribute="width" constant="40" id="mlQ-ub-YSq"/>
+                                        </constraints>
+                                        <state key="normal" title="Button" image="music"/>
+                                        <connections>
+                                            <action selector="musicPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="vFN-ll-Lyb"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="1" green="0.13250041745786623" blue="0.15727549583208389" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
+                                    <constraint firstItem="fdW-eh-LI3" firstAttribute="centerY" secondItem="eBg-L7-10a" secondAttribute="centerY" id="Qyo-tA-kgh"/>
+                                    <constraint firstAttribute="bottom" secondItem="OZn-LF-Yyf" secondAttribute="bottom" constant="5" id="Yk8-EL-shB"/>
                                     <constraint firstAttribute="height" constant="65" id="Zx2-Lk-ZWi"/>
+                                    <constraint firstAttribute="trailing" secondItem="OZn-LF-Yyf" secondAttribute="trailing" constant="8" id="v7A-6v-vhA"/>
+                                    <constraint firstItem="fdW-eh-LI3" firstAttribute="centerX" secondItem="eBg-L7-10a" secondAttribute="centerX" id="xc6-e1-XQd"/>
                                 </constraints>
                             </view>
                             <searchBar contentMode="redraw" searchBarStyle="minimal" translatesAutoresizingMaskIntoConstraints="NO" id="6xD-0J-end">
@@ -112,11 +144,12 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="136.80000000000001" y="137.18140929535232"/>
+            <point key="canvasLocation" x="2" y="110"/>
         </scene>
     </scenes>
     <resources>
         <image name="-pokedex bg" width="1920" height="1200"/>
         <image name="4" width="120" height="120"/>
+        <image name="music" width="100" height="100"/>
     </resources>
 </document>
