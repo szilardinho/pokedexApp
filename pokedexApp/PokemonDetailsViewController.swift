@@ -32,13 +32,21 @@ class PokemonDetailsViewController: UIViewController {
         
         nameLabel.text = pokemon.name
         
-
-        
-    
-    
-    
+        pokemon.downloadPokemonDetails {
+            // whatever we write here will only call once the network call is completed
+            self.updateUI()
+            
+        }
     }
-
+    
+    func updateUI() {
+        
+        attackLabel.text = pokemon.attack
+        defenseLabel.text = pokemon.defense
+        heightLabel.text = pokemon.height
+        weightLabel.text = pokemon.weight
+        
+    }
 
     @IBAction func backButtonPressde(_ sender: UIButton) {
         

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		111C80B91EAE9EE200F0C730 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 111C80B81EAE9EE200F0C730 /* Constants.swift */; };
 		1183B9091EAA9D3A00AA2DD2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183B9081EAA9D3A00AA2DD2 /* AppDelegate.swift */; };
 		1183B90B1EAA9D3A00AA2DD2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1183B90A1EAA9D3A00AA2DD2 /* ViewController.swift */; };
 		1183B90E1EAA9D3A00AA2DD2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1183B90C1EAA9D3A00AA2DD2 /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111C80B81EAE9EE200F0C730 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		117CE5F148FC116776F46725 /* Pods_pokedexApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_pokedexApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		1183B9051EAA9D3A00AA2DD2 /* pokedexApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pokedexApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1183B9081EAA9D3A00AA2DD2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 				1183B9241EAD774800AA2DD2 /* Pokemon Hollow.ttf */,
 				1183B9141EAA9D3A00AA2DD2 /* Info.plist */,
 				1183B9261EAD7BF800AA2DD2 /* pokemonTheme.mp3 */,
+				111C80B81EAE9EE200F0C730 /* Constants.swift */,
 			);
 			path = pokedexApp;
 			sourceTree = "<group>";
@@ -241,6 +244,7 @@
 				1183B90B1EAA9D3A00AA2DD2 /* ViewController.swift in Sources */,
 				1183B9091EAA9D3A00AA2DD2 /* AppDelegate.swift in Sources */,
 				1183B91F1EAC6AB500AA2DD2 /* Pokemon.swift in Sources */,
+				111C80B91EAE9EE200F0C730 /* Constants.swift in Sources */,
 				1183B9231EAD6E4200AA2DD2 /* csv.swift in Sources */,
 				1183B9291EAD8AC900AA2DD2 /* PokemonDetailsViewController.swift in Sources */,
 			);
@@ -406,6 +410,7 @@
 				1183B9191EAA9D3A00AA2DD2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
