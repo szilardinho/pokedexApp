@@ -127,7 +127,7 @@ class Pokemon {
                     self._attack = "\(attack)"
             }
             
-            if let defense = dictionary["defense"] as? String {
+            if let defense = dictionary["defense"] as? Int {
                 
                     self._defense = "\(defense)"
             }
