@@ -48,7 +48,7 @@ class Pokemon {
     }
 
     
-    var nexEvolutionName: String {
+    var nextEvolutionName: String {
         
         if _nextEvolutionName == nil {
             
@@ -220,8 +220,6 @@ class Pokemon {
                         
                         completed()
                         
-                        
-                        
                     })
                 }
                 
@@ -263,9 +261,9 @@ class Pokemon {
                     
                     }
                 
-                    print(self._nextEvolutionID)
-                    print(self._nextEvolutionLevel)
-                    print(self._nextEvolutionName)
+                   print(self.nextEvolutionID)
+                   print(self.nextEvolutionLevel)
+                    print(self.nextEvolutionName)
                 
                 }
             

@@ -19,7 +19,12 @@ class ViewController: UIViewController, UICollectionViewDelegate, UICollectionVi
     var musicPlayer: AVAudioPlayer!
     var inSearchMode = false
     
-    
+  
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIApplication.shared.isStatusBarHidden = true
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()

@@ -45,6 +45,12 @@ class PokemonDetailsViewController: UIViewController {
         }
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIApplication.shared.isStatusBarHidden = true
+    }
+    
     func updateUI() {
         
         attackLabel.text = pokemon.attack
@@ -57,12 +63,12 @@ class PokemonDetailsViewController: UIViewController {
         if pokemon.nextEvolutionID == "" {
             
             evoLabel.text = "No Evolutions"
-            evoLabel.isHidden = true
+            nextEvoImage.isHidden = true
         } else {
             
             nextEvoImage.isHidden = false
             nextEvoImage.image = UIImage(named: pokemon.nextEvolutionID)
-            let string = "Next Evolution: \(pokemon.nexEvolutionName) - LVL \(pokemon.nextEvolutionLevel)"
+            let string = "Next Evolution: \(pokemon.nextEvolutionName) - LVL \(pokemon.nextEvolutionLevel)"
             evoLabel.text = string 
             
         }
